@@ -5,14 +5,12 @@ return require("packer").startup(function(use)
 	use("folke/which-key.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
-	use({
-		"nvim-telescope/telescope-fzf-native.nvim",
-		run = "make",
-	})
-	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-	})
+	-- telescope
+	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use({ "nvim-telescope/telescope-file-browser.nvim" })
+	use({ "nvim-telescope/telescope-ui-select.nvim" })
+
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
@@ -23,7 +21,6 @@ return require("packer").startup(function(use)
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
 	use("onsails/lspkind.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
@@ -35,4 +32,5 @@ return require("packer").startup(function(use)
 	})
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
+	use("lewis6991/gitsigns.nvim")
 end)
