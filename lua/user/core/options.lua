@@ -19,8 +19,8 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- cursor line
-opt.cursorline = false
-opt.cursorcolumn = false
+opt.cursorline = true
+opt.cursorcolumn = true
 
 -- appearance
 opt.termguicolors = true
@@ -48,7 +48,7 @@ opt.scrolloff = 8
 opt.backup = false
 opt.undofile = true
 
-opt.list = true
-opt.listchars = "tab: ,trail:·,extends:◣,precedes:◢,nbsp:○,eol:↵"
+-- opt.list = true
+-- opt.listchars = "tab: ,trail:·,extends:◣,precedes:◢,nbsp:○,eol:↵"
 
 vim.o.ch = 0
