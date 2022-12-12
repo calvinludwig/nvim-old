@@ -1,6 +1,11 @@
 vim.o.background = "dark"
 local colorscheme = 0
 
+-- 0 = rose-pine
+-- 1 = catppuccin
+-- 2 = oxocarbon
+-- 3 = enfocado
+
 if colorscheme == 0 then
 	require("rose-pine").setup({
 		--- @usage 'main' | 'moon'
@@ -10,41 +15,10 @@ if colorscheme == 0 then
 		disable_background = false,
 		disable_float_background = false,
 		disable_italics = false,
-
-		--- @usage string hex value or named color from rosepinetheme.com/palette
-		groups = {
-			background = "base",
-			panel = "surface",
-			border = "highlight_med",
-			comment = "muted",
-			link = "iris",
-			punctuation = "subtle",
-
-			error = "love",
-			hint = "iris",
-			info = "foam",
-			warn = "gold",
-
-			headings = {
-				h1 = "iris",
-				h2 = "foam",
-				h3 = "rose",
-				h4 = "gold",
-				h5 = "pine",
-				h6 = "foam",
-			},
-			-- or set all headings at once
-			-- headings = 'subtle'
-		},
-
-		-- Change specific vim highlight groups
-		highlight_groups = {
-			ColorColumn = { bg = "rose" },
-		},
 	})
 
 	-- set colorscheme after options
-	vim.cmd("colorscheme rose-pine")
+	vim.cmd.colorscheme("rose-pine")
 end
 
 if colorscheme == 1 then
@@ -53,4 +27,13 @@ if colorscheme == 1 then
 	})
 
 	vim.cmd.colorscheme("catppuccin")
+end
+
+if colorscheme == 2 then
+	vim.cmd.colorscheme("oxocarbon")
+end
+
+if colorscheme == 3 then
+	vim.g.enfocado_style = 'neon'
+	vim.cmd.colorscheme("enfocado")
 end

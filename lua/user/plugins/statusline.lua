@@ -2,7 +2,7 @@ local lualine = require("lualine")
 
 lualine.setup({
 	options = {
-		theme = "rose-pine",
+		-- theme = "rose-pine",
 		section_separators = { left = "", right = "" },
 		component_separators = { left = "", right = "" },
 	},

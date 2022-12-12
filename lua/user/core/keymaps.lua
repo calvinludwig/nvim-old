@@ -21,3 +21,6 @@ keymap.set("n", "<leader><Tab>", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 keymap.set("n", "<leader>F", vim.lsp.buf.formatting_sync)
+
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")

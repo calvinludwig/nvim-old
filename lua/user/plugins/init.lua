@@ -7,6 +7,7 @@ require("user.plugins.autopairs")
 require("user.plugins.which-key")
 require("user.plugins.gitsigns")
 require("user.plugins.zenmode")
+require("user.plugins.nvim-commen")
 
 --require("user.plugins.null-ls")
 require("user.plugins.treesitter")

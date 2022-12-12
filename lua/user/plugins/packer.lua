@@ -1,8 +1,14 @@
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
+
+
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "rose-pine/neovim", as = "rose-pine" })
+	use({ 'nyoom-engineering/oxocarbon.nvim' })
+	use({ "wuelnerdotexe/vim-enfocado" })
+
+
 	use("folke/which-key.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
@@ -44,4 +50,7 @@ return require("packer").startup(function(use)
 			{ 'rafamadriz/friendly-snippets' },
 		}
 	}
+	use("ThePrimeagen/vim-be-good")
+	use("terrortylor/nvim-comment")
+
 end)
