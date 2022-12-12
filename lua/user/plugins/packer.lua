@@ -50,7 +50,8 @@ return require("packer").startup(function(use)
 			{ 'rafamadriz/friendly-snippets' },
 		}
 	}
-	use("ThePrimeagen/vim-be-good")
-	use("terrortylor/nvim-comment")
 
+	use("ThePrimeagen/vim-be-good")
+	use("numToStr/Comment.nvim")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 end)
