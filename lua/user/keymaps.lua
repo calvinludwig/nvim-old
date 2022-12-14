@@ -22,3 +22,15 @@ keymap.set("n", "<leader>F", vim.lsp.buf.format, { desc = "Format file" })
 
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
+
+local harpoon_ui = require("harpoon.ui")
+local harpoon_mark = require("harpoon.mark")
+
+keymap.set("n", "<leader>hh", harpoon_ui.toggle_quick_menu, { desc = "Open Harpoon menu" })
+keymap.set("n", "<leader>ha", harpoon_mark.add_file, { desc = "Add file to Harpoon" })
+
+for i = 1, 9, 1 do
+	keymap.set("n", "<leader>" .. i, function()
+		harpoon_ui.nav_file(i)
+	end)
+end

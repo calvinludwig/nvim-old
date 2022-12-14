@@ -16,6 +16,8 @@ return require("packer").startup(function(use)
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 	use({ "nvim-telescope/telescope-ui-select.nvim" })
 
+	use("ThePrimeagen/harpoon")
+
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
@@ -50,13 +52,13 @@ return require("packer").startup(function(use)
 	})
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
-	use {
+	use({
 		"ThePrimeagen/refactoring.nvim",
 		requires = {
 			{ "nvim-lua/plenary.nvim" },
-			{ "nvim-treesitter/nvim-treesitter" }
-		}
-	}
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+	})
 
 	use("ThePrimeagen/vim-be-good")
 	use("numToStr/Comment.nvim")
