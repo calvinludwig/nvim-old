@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/me/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/me/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/me/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -154,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/me/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/me/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/me/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -193,11 +203,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/me/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
-  ["oxocarbon.nvim"] = {
-    loaded = true,
-    path = "/home/me/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
-    url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -248,11 +253,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/me/.local/share/nvim/site/pack/packer/start/vim-blade",
     url = "https://github.com/jwalton512/vim-blade"
-  },
-  ["vim-enfocado"] = {
-    loaded = true,
-    path = "/home/me/.local/share/nvim/site/pack/packer/start/vim-enfocado",
-    url = "https://github.com/wuelnerdotexe/vim-enfocado"
   },
   ["which-key.nvim"] = {
     loaded = true,

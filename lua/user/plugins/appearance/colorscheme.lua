@@ -1,10 +1,5 @@
 vim.o.background = "light"
-local colorscheme = 0
-
--- 0 = rose-pine
--- 1 = catppuccin
--- 2 = oxocarbon
--- 3 = enfocado
+local colorscheme = 3
 
 if colorscheme == 0 then
 	require("rose-pine").setup({
@@ -34,6 +29,15 @@ if colorscheme == 2 then
 end
 
 if colorscheme == 3 then
-	vim.g.enfocado_style = 'neon'
-	vim.cmd.colorscheme("enfocado")
+	require("nightfox").setup({
+		options = {
+			styles = {
+				comments = "italic",
+				keywords = "bold",
+				types = "italic,bold",
+			},
+		},
+	})
+
+	vim.cmd.colorscheme("carbonfox")
 end

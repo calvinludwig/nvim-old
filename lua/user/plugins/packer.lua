@@ -4,12 +4,17 @@ return require("packer").startup(function(use)
 
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "rose-pine/neovim", as = "rose-pine" })
-	use({ "nyoom-engineering/oxocarbon.nvim" })
-	use({ "wuelnerdotexe/vim-enfocado" })
+	use("EdenEast/nightfox.nvim")
 
 	use("folke/which-key.nvim")
 	use("kyazdani42/nvim-web-devicons")
-	use("nvim-lualine/lualine.nvim")
+
+	-- lines
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
 	-- telescope
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
