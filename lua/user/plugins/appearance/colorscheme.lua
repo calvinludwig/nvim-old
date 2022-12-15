@@ -24,9 +24,7 @@ if colorscheme == 1 then
 	vim.cmd.colorscheme("catppuccin")
 end
 
-if colorscheme == 2 then
-	vim.cmd.colorscheme("oxocarbon")
-end
+if colorscheme == 2 then vim.cmd.colorscheme("oxocarbon") end
 
 if colorscheme == 3 then
 	require("nightfox").setup({

@@ -18,8 +18,18 @@ null_ls.setup({
 		diagnostics.php,
 		diagnostics.phpstan,
 		formatting.pint.with({
-			command = "pint"
+			command = "pint",
 		}),
+		-- go
+		diagnostics.golangci_lint,
+		diagnostics.revive,
+		diagnostics.staticcheck,
+		formatting.gofmt,
+		formatting.goimports,
+		formatting.goimports_reviser,
+		formatting.golines,
+		-- rust
+		formatting.rustfmt,
 	},
 })
 mason_null_ls.setup({

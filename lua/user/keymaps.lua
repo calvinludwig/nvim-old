@@ -30,7 +30,5 @@ keymap.set("n", "<leader>hh", harpoon_ui.toggle_quick_menu, { desc = "Open Harpo
 keymap.set("n", "<leader>ha", harpoon_mark.add_file, { desc = "Add file to Harpoon" })
 
 for i = 1, 9, 1 do
-	keymap.set("n", "<leader>" .. i, function()
-		harpoon_ui.nav_file(i)
-	end)
+	keymap.set("n", "<leader>" .. i, function() harpoon_ui.nav_file(i) end)
 end
