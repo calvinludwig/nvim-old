@@ -7,6 +7,7 @@ return require("packer").startup(function(use)
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
+		"glepnir/lspsaga.nvim",
 	})
 
 	-- CMP
@@ -17,6 +18,8 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp-document-symbol")
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
 	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-nvim-lua")
+	use("onsails/lspkind.nvim")
 
 	-- SNIPPETS
 	use("L3MON4D3/LuaSnip")
@@ -25,21 +28,18 @@ return require("packer").startup(function(use)
 
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
-	use("folke/which-key.nvim")
 	use("kyazdani42/nvim-web-devicons")
 
 	-- lines
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
+	use("feline-nvim/feline.nvim")
 	-- telescope
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 	use({ "nvim-telescope/telescope-ui-select.nvim" })
 	use("ThePrimeagen/harpoon")
+	use("rcarriga/nvim-notify")
 
 	use({
 		"nvim-treesitter/nvim-treesitter",

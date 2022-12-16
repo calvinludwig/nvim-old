@@ -13,8 +13,21 @@ treesitter.setup({
 	-- ensure these language parsers are installed
 	ensure_installed = {
 		"lua",
+		"help",
+		"javascript",
+		"typescript",
+		"rust",
+		"go",
+		"php",
+		"toml",
+		"yaml",
+		"json",
+		"c",
+		"html",
+		"css",
 	},
 	-- auto install above language parsers
 	auto_install = true,
+	sync_install = false,
 	context_commentstring = { enable = true },
 })

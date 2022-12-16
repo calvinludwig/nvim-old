@@ -5,21 +5,40 @@ opt.number = true
 opt.numberwidth = 2
 
 opt.tabstop = 4
+opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
+
 opt.autoindent = true
+opt.smartindent = true
 
 opt.wrap = false
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
+
+opt.hlsearch = true
+opt.incsearch = true
+
+opt.termguicolors = true
+
+opt.scrolloff = 12
+opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
+
+opt.updatetime = 50
+
+opt.colorcolumn = "120"
+
 opt.ignorecase = true
 opt.smartcase = true
-opt.cursorline = true
+opt.cursorline = false
 opt.cursorcolumn = false
-opt.termguicolors = true
-opt.signcolumn = "yes"
 opt.backspace = "indent,eol,start"
 opt.showcmd = true
 opt.autoread = true
--- opt.clipboard:append("unnamedplus")
+
 opt.splitright = true
 opt.splitbelow = true
 opt.iskeyword:append("-")
@@ -27,9 +46,6 @@ opt.fileencoding = "utf-8"
 opt.showmode = false
 opt.timeoutlen = 1000
 opt.cmdheight = 1
-opt.scrolloff = 8
-opt.backup = false
-opt.undofile = true
 opt.virtualedit = "block"
 opt.list = true
 opt.listchars = "tab:→ ,leadmultispace:·,eol:↙"
