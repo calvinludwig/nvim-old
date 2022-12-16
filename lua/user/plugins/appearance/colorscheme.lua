@@ -1,13 +1,13 @@
-vim.g.background = "dark"
+vim.g.background = 'dark'
 
-local present, catppuccin = pcall(require, "catppuccin")
+local present, catppuccin = pcall(require, 'catppuccin')
 if not present then return end
 
-catppuccin.setup({
-	flavour = "macchiato", -- latte, frappe, macchiato, mocha
+catppuccin.setup {
+	flavour = 'macchiato', -- latte, frappe, macchiato, mocha
 	styles = {
-		comments = { "italic" },
-		conditionals = { "italic" },
+		comments = { 'italic' },
+		conditionals = { 'italic' },
 		loops = {},
 		functions = {},
 		keywords = {},
@@ -20,10 +20,8 @@ catppuccin.setup({
 		operators = {},
 	},
 	color_overrides = {
-        macchiato = {
-
-        }
-    },
+		macchiato = {},
+	},
 	custom_highlights = {},
 	integrations = {
 		cmp = true,
@@ -36,6 +34,6 @@ catppuccin.setup({
 		harpoon = true,
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 	},
-})
+}
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme 'catppuccin'

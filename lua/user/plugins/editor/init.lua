@@ -1,6 +1,6 @@
-local a = "user.plugins.editor."
+local a = 'user.plugins.editor.'
 
-require(a .. "treesitter")
-require(a .. "comment")
-require(a .. "autopairs")
-require(a .. "gitsigns")
+require(a .. 'treesitter')
+require(a .. 'comment')
+require(a .. 'autopairs')
+require(a .. 'gitsigns')

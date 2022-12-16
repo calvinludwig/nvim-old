@@ -1,4 +1,4 @@
-local a = "user.plugins.components."
+local a = 'user.plugins.components.'
 
-require(a .. "telescope")
-require(a .. "harpoon")
+require(a .. 'telescope')
+require(a .. 'harpoon')
