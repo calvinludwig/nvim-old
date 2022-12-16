@@ -29,8 +29,6 @@ vim.opt.isfname:append '@-@'
 
 opt.updatetime = 50
 
-opt.colorcolumn = '120'
-
 opt.ignorecase = true
 opt.smartcase = true
 opt.cursorline = false
