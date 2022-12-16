@@ -1,10 +1,14 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>")
 keymap.set("i", "kj", "<ESC>")
 
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "<Esc>", function()
+	vim.cmd.nohlsearch()
+	vim.cmd.echo()
+end)
 
 keymap.set("n", "x", '"_x')
 

@@ -1,41 +1,41 @@
-vim.o.background = "light"
-local colorscheme = 3
+vim.g.background = "dark"
 
-if colorscheme == 0 then
-	require("rose-pine").setup({
-		--- @usage 'main' | 'moon'
-		dark_variant = "moon",
-		bold_vert_split = false,
-		dim_nc_background = false,
-		disable_background = false,
-		disable_float_background = false,
-		disable_italics = false,
-	})
+local present, catppuccin = pcall(require, "catppuccin")
+if not present then return end
 
-	-- set colorscheme after options
-	vim.cmd.colorscheme("rose-pine")
-end
+catppuccin.setup({
+	flavour = "macchiato", -- latte, frappe, macchiato, mocha
+	styles = {
+		comments = { "italic" },
+		conditionals = { "italic" },
+		loops = {},
+		functions = {},
+		keywords = {},
+		strings = {},
+		variables = {},
+		numbers = {},
+		booleans = {},
+		properties = {},
+		types = {},
+		operators = {},
+	},
+	color_overrides = {
+        macchiato = {
 
-if colorscheme == 1 then
-	require("catppuccin").setup({
-		flavour = "mocha", -- latte, frappe, macchiato, mocha
-	})
+        }
+    },
+	custom_highlights = {},
+	integrations = {
+		cmp = true,
+		gitsigns = true,
+		nvimtree = true,
+		telescope = true,
+		notify = false,
+		mini = false,
+		bufferline = true,
+		harpoon = true,
+		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+	},
+})
 
-	vim.cmd.colorscheme("catppuccin")
-end
-
-if colorscheme == 2 then vim.cmd.colorscheme("oxocarbon") end
-
-if colorscheme == 3 then
-	require("nightfox").setup({
-		options = {
-			styles = {
-				comments = "italic",
-				keywords = "bold",
-				types = "italic,bold",
-			},
-		},
-	})
-
-	vim.cmd.colorscheme("carbonfox")
-end
+vim.cmd.colorscheme("catppuccin")

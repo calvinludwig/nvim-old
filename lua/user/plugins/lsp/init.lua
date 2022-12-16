@@ -1,46 +1,32 @@
-require("mason.settings").set({
-	ui = {
-		border = "rounded",
-	},
+require("mason").setup()
+require("mason-lspconfig").setup({
+    ensure_installed = { "sumneko_lua" }
+})
+local telescope = require("telescope.builtin")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+local lspconfig = require("lspconfig")
+local on_attach = function(_, _)
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename" })
+    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code action" })
+
+    vim.keymap.set("n", "gd", telescope.lsp_definitions, { desc = "LSP Definition" })
+    vim.keymap.set("n", "gi", telescope.lsp_implementations, { desc = "LSP implementation" })
+    vim.keymap.set("n", "gr", telescope.lsp_references, { desc = "LSP References" })
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
+end
+
+lspconfig.sumneko_lua.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { "vim" },
+            },
+        },
+    },
 })
 
-local lsp = require("lsp-zero")
-lsp.preset("recommended")
-
-lsp.ensure_installed({
-	"sumneko_lua",
-	"gopls",
-})
-
-lsp.nvim_workspace()
-
-lsp.set_preferences({
-	suggest_lsp_servers = true,
-	setup_servers_on_start = true,
-	set_lsp_keymaps = true,
-	configure_diagnostics = true,
-	cmp_capabilities = true,
-	manage_nvim_cmp = true,
-	call_servers = "local",
-	sign_icons = {
-		error = "",
-		warn = "",
-		hint = "ﬤ",
-		info = "",
-	},
-})
-
-lsp.setup()
-
-vim.diagnostic.config({
-	virtual_text = true,
-	signs = true,
-	update_in_insert = false,
-	underline = true,
-	severity_sort = false,
-	float = true,
-})
-
-local a = "user.plugins.lsp."
-
-require(a .. "null-ls")
+require("user.plugins.lsp.cmp")
+require("user.plugins.lsp.null-ls")

@@ -10,10 +10,9 @@ local completion = null_ls.builtins.completion
 
 null_ls.setup({
 	sources = {
+		code_actions.refactoring,
 		-- lua
 		formatting.stylua,
-		code_actions.refactoring,
-		diagnostics.luacheck,
 		-- php
 		diagnostics.php,
 		diagnostics.phpstan,

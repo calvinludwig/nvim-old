@@ -1,7 +1,7 @@
-local highlights = require("rose-pine.plugins.bufferline")
 local bufferline = require("bufferline")
+
 bufferline.setup({
-	highlights = highlights,
+	highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
 		diagnostics = "nvim_lsp",
 	},
@@ -10,7 +10,7 @@ bufferline.setup({
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		theme = "catppuccin",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
@@ -30,7 +30,7 @@ require("lualine").setup({
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
 		lualine_c = { "filename" },
-		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_x = {"encoding", "fileformat", "filetype" },
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},
