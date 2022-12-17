@@ -23,7 +23,7 @@ opt.incsearch = true
 
 opt.termguicolors = true
 
-opt.scrolloff = 12
+opt.scrolloff = 4
 opt.signcolumn = 'yes'
 vim.opt.isfname:append '@-@'
 

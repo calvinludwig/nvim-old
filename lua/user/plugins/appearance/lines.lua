@@ -1,12 +1,3 @@
-local bufferline = require 'bufferline'
-
-bufferline.setup {
-	highlights = require('catppuccin.groups.integrations.bufferline').get(),
-	options = {
-		diagnostics = 'nvim_lsp',
-	},
-}
-
 local ctp_feline = require 'catppuccin.groups.integrations.feline'
 
 ctp_feline.setup {

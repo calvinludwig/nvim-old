@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
 		'williamboman/mason-lspconfig.nvim',
 		'neovim/nvim-lspconfig',
 		'glepnir/lspsaga.nvim',
+		'j-hui/fidget.nvim',
 	}
 
 	-- CMP
@@ -31,7 +32,6 @@ return require('packer').startup(function(use)
 	use 'kyazdani42/nvim-web-devicons'
 
 	-- lines
-	use { 'akinsho/bufferline.nvim', tag = 'v3.*', requires = 'nvim-tree/nvim-web-devicons' }
 	use 'feline-nvim/feline.nvim'
 	-- telescope
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }

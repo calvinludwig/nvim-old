@@ -29,7 +29,9 @@ local default_on_attach = function(_, bufnr)
 	vim.keymap.set('n', '<leader>cd', '<cmd>Lspsaga show_line_diagnostics<CR>', opts)
 	vim.keymap.set('n', '<leader>F', vim.lsp.buf.format, opts)
 
-	vim.keymap.set('n', 'gd', '<cmd>Lspsaga peek_definition<CR>', opts)
+	vim.keymap.set('n', 'gd', telescope.lsp_definitions, opts)
+	vim.keymap.set('n', 'gt', telescope.lsp_type_definitions, opts)
+	vim.keymap.set('n', 'gg', '<cmd>Lspsaga peek_definition<CR>', opts)
 	vim.keymap.set('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', opts)
 	vim.keymap.set('n', 'gi', telescope.lsp_implementations, opts)
 	vim.keymap.set('n', 'gr', telescope.lsp_references, opts)
@@ -71,6 +73,19 @@ rt.setup {
 			vim.keymap.set('n', '<leader>ca', rt.code_action_group.code_action_group, opts)
 		end,
 	},
+}
+
+require('fidget').setup {
+	align = {
+		bottom = true, -- align fidgets along bottom edge of buffer
+		right = true, -- align fidgets along right edge of buffer
+	},
+    window = {
+    relative = "win",         -- where to anchor, either "win" or "editor"
+    blend = 100,              -- &winblend for the window
+    zindex = nil,             -- the zindex value for the window
+    border = "single",          -- style of border for the fidget window
+  },
 }
 
 require 'user.plugins.lsp.cmp'
