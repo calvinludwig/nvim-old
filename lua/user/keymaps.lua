@@ -1,35 +1,42 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-local keymap = vim.keymap
 
-keymap.set('i', 'jk', '<ESC>')
-keymap.set('i', 'kj', '<ESC>')
+vim.keymap.set('i', 'jk', '<ESC>')
+vim.keymap.set('i', 'kj', '<ESC>')
 
-keymap.set('n', '<Esc>', function()
+vim.keymap.set('n', '<Esc>', function()
 	vim.cmd.nohlsearch()
 	vim.cmd.echo()
 end)
 
-keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
-keymap.set('n', 'x', '"_x')
-keymap.set('n', 'J', 'mzJ`z')
-keymap.set('n', '<C-d>', '<C-d>zz')
-keymap.set('n', '<C-u>', '<C-u>zz')
-keymap.set('n', 'n', 'nzzzv')
-keymap.set('n', 'N', 'Nzzzv')
+vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('n', 'J', 'mzJ`z')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
 
-keymap.set('n', '<leader>y', '"+y')
-keymap.set('v', '<leader>y', '"+y')
-keymap.set('n', '<leader>Y', '"+Y')
+vim.keymap.set('n', '<leader>y', '"+y')
+vim.keymap.set('v', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>Y', '"+Y')
 
 -- window management
-keymap.set('n', '<leader>sv', '<C-w>v', { desc = 'Split window vertically' }) -- split window vertically
-keymap.set('n', '<leader>sh', '<C-w>s', { desc = 'Split window horizontally' }) -- split window horizontally
-keymap.set('n', '<leader>se', '<C-w>=', { desc = 'Make split windows equal width and height' }) -- make split windows equal width & height
-keymap.set('n', '<leader>sx', ':close<CR>', { desc = 'Close current window' }) -- close current split window
+vim.keymap.set('n', '<leader>sv', '<C-w>v', { desc = 'Split window vertically' }) -- split window vertically
+vim.keymap.set('n', '<leader>sh', '<C-w>s', { desc = 'Split window horizontally' }) -- split window horizontally
+vim.keymap.set('n', '<leader>se', '<C-w>=', { desc = 'Make split windows equal width and height' }) -- make split windows equal width & height
+vim.keymap.set('n', '<leader>sx', ':close<CR>', { desc = 'Close current window' }) -- close current split window
 
-keymap.set('n', '<leader><Tab>', ':bn<CR>', { desc = 'Next buffer' }) --  go to next buffer
-keymap.set('n', '<leader><s-Tab>', ':bp<CR>', { desc = 'Previous buffer' }) --  go to previous buffer
-keymap.set('n', '<leader>q', ':bd<CR>', { desc = 'Close buffer' }) --  go to previous buffer
+vim.keymap.set('n', '<leader><Tab>', ':bn<CR>', { desc = 'Next buffer' }) --  go to next buffer
+vim.keymap.set('n', '<leader><s-Tab>', ':bp<CR>', { desc = 'Previous buffer' }) --  go to previous buffer
+vim.keymap.set('n', '<leader>q', ':bd<CR>', { desc = 'Close buffer' }) --  go to previous buffer
+
+vim.keymap.set('n', '<leader>l', function ()
+    vim.o.list = not vim.o.list
+end)
+
+vim.keymap.set('n', '<leader>gg', function ()
+    vim.cmd('Gitsigns toggle_signs')
+end)
