@@ -47,8 +47,11 @@ return require('packer').startup(function(use)
 	}
 	use 'windwp/nvim-autopairs'
 	use 'windwp/nvim-ts-autotag'
+
 	use 'lewis6991/gitsigns.nvim'
-	use 'folke/zen-mode.nvim'
+	use 'tpope/vim-fugitive'
+
+    use 'folke/zen-mode.nvim'
 
 	use 'jose-elias-alvarez/null-ls.nvim'
 	use 'jayp0521/mason-null-ls.nvim'
