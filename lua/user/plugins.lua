@@ -3,13 +3,11 @@ require('packer').startup(function(use)
 	use 'nvim-lua/plenary.nvim'
 
 	-- LSP
-	use {
-		'williamboman/mason.nvim',
-		'williamboman/mason-lspconfig.nvim',
-		'neovim/nvim-lspconfig',
-		'glepnir/lspsaga.nvim',
-		'j-hui/fidget.nvim',
-	}
+	use 'williamboman/mason.nvim'
+	use 'williamboman/mason-lspconfig.nvim'
+	use 'neovim/nvim-lspconfig'
+	use 'j-hui/fidget.nvim'
+    use 'simrat39/rust-tools.nvim'
 
 	-- CMP
 	use 'hrsh7th/nvim-cmp'
@@ -27,13 +25,11 @@ require('packer').startup(function(use)
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'rafamadriz/friendly-snippets'
 
+    use 'kyazdani42/nvim-web-devicons'
 	use { 'catppuccin/nvim', as = 'catppuccin' }
-
-	use 'kyazdani42/nvim-web-devicons'
-
-	-- lines
 	use 'feline-nvim/feline.nvim'
-	-- telescope
+
+    -- telescope
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	use { 'nvim-telescope/telescope-file-browser.nvim' }
@@ -45,15 +41,16 @@ require('packer').startup(function(use)
 		'nvim-treesitter/nvim-treesitter',
 		run = function() require('nvim-treesitter.install').update { with_sync = true } end,
 	}
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
 	use 'windwp/nvim-autopairs'
 	use 'windwp/nvim-ts-autotag'
+    use 'numToStr/Comment.nvim'
 
 	use 'lewis6991/gitsigns.nvim'
 	use 'tpope/vim-fugitive'
 
 	use 'jose-elias-alvarez/null-ls.nvim'
 	use 'jayp0521/mason-null-ls.nvim'
-	use 'simrat39/rust-tools.nvim'
 	use {
 		'ThePrimeagen/refactoring.nvim',
 		requires = {
@@ -63,8 +60,6 @@ require('packer').startup(function(use)
 	}
 
 	use 'ThePrimeagen/vim-be-good'
-	use 'numToStr/Comment.nvim'
-	use 'JoosepAlviste/nvim-ts-context-commentstring'
 	use 'jwalton512/vim-blade'
 end)
 
