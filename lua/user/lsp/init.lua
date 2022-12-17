@@ -13,10 +13,9 @@ require('mason').setup {
 	},
 }
 
-require 'user.plugins.lsp.servers'
-
-require 'user.plugins.lsp.cmp'
-require 'user.plugins.lsp.null-ls'
+require 'user.lsp.servers'
+require 'user.lsp.cmp'
+require 'user.lsp.null-ls'
 require('fidget').setup {
 	align = {
 		bottom = true, -- align fidgets along bottom edge of buffer

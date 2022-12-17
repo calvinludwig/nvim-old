@@ -1,4 +1,4 @@
-local path = 'user.plugins.lsp.servers'
+local path = 'user.lsp.servers'
 local default_setup = require(path .. '.default-setup')
 
 require('mason-lspconfig').setup {

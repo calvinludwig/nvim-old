@@ -1,4 +1,4 @@
-local a = 'user.plugins.editor.'
+local a = 'user.editor.'
 
 require(a .. 'treesitter')
 require(a .. 'comment')

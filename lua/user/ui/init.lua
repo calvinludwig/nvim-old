@@ -1,7 +1,6 @@
-local path = 'user.plugins.ui.'
+local path = 'user.ui.'
 
 require(path .. 'colorscheme')
 require(path .. 'feline')
-require(path .. 'zenmode')
 
 vim.notify = require 'notify'

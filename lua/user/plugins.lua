@@ -51,8 +51,6 @@ require('packer').startup(function(use)
 	use 'lewis6991/gitsigns.nvim'
 	use 'tpope/vim-fugitive'
 
-	use 'folke/zen-mode.nvim'
-
 	use 'jose-elias-alvarez/null-ls.nvim'
 	use 'jayp0521/mason-null-ls.nvim'
 	use 'simrat39/rust-tools.nvim'
@@ -70,7 +68,7 @@ require('packer').startup(function(use)
 	use 'jwalton512/vim-blade'
 end)
 
-require 'user.plugins.ui'
-require 'user.plugins.components'
-require 'user.plugins.editor'
-require 'user.plugins.lsp'
+require 'user.lsp'
+require 'user.editor'
+require 'user.ui'
+require 'user.components'
