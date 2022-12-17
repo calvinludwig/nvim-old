@@ -1,6 +1,6 @@
 local null_ls = require 'null-ls'
 local mason_null_ls = require 'mason-null-ls'
-local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+local common = require 'user.lsp.servers.common'
 
 local code_actions = null_ls.builtins.code_actions
 local diagnostics = null_ls.builtins.diagnostics
@@ -9,6 +9,7 @@ local hover = null_ls.builtins.hover
 local completion = null_ls.builtins.completion
 
 null_ls.setup {
+    on_attach = common.on_attach,
 	sources = {
 		code_actions.refactoring,
 		-- lua

@@ -1,5 +1,5 @@
 local path = 'user.lsp.servers'
-local default_setup = require(path .. '.default-setup')
+local common = require(path .. '.common')
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
@@ -10,8 +10,8 @@ require('mason-lspconfig').setup {
 }
 
 require('lspconfig').sumneko_lua.setup {
-	on_attach = default_setup.on_attach,
-	capabilities = default_setup.capabilities,
+	on_attach = common.on_attach,
+	capabilities = common.capabilities,
 	settings = {
 		Lua = {
 			runtime = {

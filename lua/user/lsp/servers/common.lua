@@ -2,7 +2,15 @@ M = {}
 
 M.capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-M.on_attach = function(_, bufnr)
+local function define_signs()
+	vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+	vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
+	vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+	vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+end
+
+M.on_attach = function(client, bufnr)
+	define_signs()
 	local telescope = require 'telescope.builtin'
 
 	local nmap = function(keys, func, desc)
@@ -39,6 +47,10 @@ M.on_attach = function(_, bufnr)
 
 	vim.keymap.set('n', '<leader>F', Format, opts)
 	vim.api.nvim_buf_create_user_command(bufnr, 'Format', Format, { desc = 'Format current buffer with LSP' })
+
+	vim.notify(client.name, 'success', {
+		render = 'minimal',
+	})
 end
 
 return M

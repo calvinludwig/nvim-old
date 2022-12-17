@@ -18,6 +18,7 @@ telescope.load_extension 'ui-select'
 -- See `:help telescope.builtin`
 
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>fb', require "telescope".extensions.file_browser.file_browser, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<c-p>', builtin.git_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })

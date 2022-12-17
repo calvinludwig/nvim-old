@@ -1,8 +1,23 @@
-local path = 'user.lsp.servers'
+local common = require('user.lsp.servers.common')
 
-local default_setup = require(path .. '.default-setup')
-
-local servers = { 'intelephense', 'gopls', 'html', 'tsserver' }
+local servers = {
+    'sumneko_lua',
+    'rust_analyzer',
+	'intelephense',
+	'gopls',
+	'html',
+	'tsserver',
+	'taplo',
+	'bashls',
+	'jsonls',
+	'tailwindcss',
+	'cssls',
+	'yamlls',
+	'pyright',
+	'marksman',
+	'clangd',
+	'cmake',
+}
 
 require('mason-lspconfig').setup {
 	ensure_installed = servers,
@@ -10,10 +25,11 @@ require('mason-lspconfig').setup {
 
 for _, lsp in ipairs(servers) do
 	require('lspconfig')[lsp].setup {
-		on_attach = default_setup.on_attach,
-		capabilities = default_setup.capabilities,
+		on_attach = common.on_attach,
+		capabilities = common.capabilities,
 	}
 end
 
-require(path .. '.rust-server')
-require(path .. '.lua-server')
+require('user.lsp.servers.rust-server')
+require('user.lsp.servers.lua-server')
+require('user.lsp.servers.null-ls')
