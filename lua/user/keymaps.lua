@@ -33,4 +33,3 @@ keymap.set('n', '<leader>sx', ':close<CR>', { desc = 'Close current window' }) -
 keymap.set('n', '<leader><Tab>', ':bn<CR>', { desc = 'Next buffer' }) --  go to next buffer
 keymap.set('n', '<leader><s-Tab>', ':bp<CR>', { desc = 'Previous buffer' }) --  go to previous buffer
 keymap.set('n', '<leader>q', ':bd<CR>', { desc = 'Close buffer' }) --  go to previous buffer
-keymap.set('n', '<leader>s', ':w<CR>', { desc = 'Save buffer' }) --  go to previous buffer

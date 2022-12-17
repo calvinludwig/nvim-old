@@ -1,51 +1,40 @@
-local opt = vim.opt
-
-opt.relativenumber = true
-opt.number = true
-opt.numberwidth = 2
-
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-
-opt.autoindent = true
-opt.smartindent = true
-
-opt.wrap = false
-opt.swapfile = false
-opt.backup = false
-opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
-opt.undofile = true
-
-opt.hlsearch = true
-opt.incsearch = true
-
-opt.termguicolors = true
-
-opt.scrolloff = 4
-opt.signcolumn = 'yes'
+vim.wo.relativenumber = true
+vim.wo.number = true
+vim.wo.numberwidth = 2
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.wrap = false
+vim.o.swapfile = false
+vim.o.backup = false
+vim.o.undodir = os.getenv 'HOME' .. '/.vim/undodir'
+vim.o.undofile = true
+vim.o.hlsearch = true
+vim.o.incsearch = true
+vim.o.termguicolors = true
+vim.o.scrolloff = 4
+vim.wo.signcolumn = 'number'
 vim.opt.isfname:append '@-@'
-
-opt.updatetime = 50
-
-opt.ignorecase = true
-opt.smartcase = true
-opt.cursorline = false
-opt.cursorcolumn = false
-opt.backspace = 'indent,eol,start'
-opt.showcmd = true
-opt.autoread = true
-
-opt.splitright = true
-opt.splitbelow = true
-opt.iskeyword:append '-'
-opt.fileencoding = 'utf-8'
-opt.showmode = false
-opt.timeoutlen = 1000
-opt.cmdheight = 1
-opt.virtualedit = 'block'
-opt.list = true
-opt.listchars = 'tab:→ ,leadmultispace:·,eol:↙'
-opt.laststatus = 3
+vim.o.updatetime = 50
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.cursorline = false
+vim.o.cursorcolumn = false
+vim.o.backspace = 'indent,eol,start'
+vim.o.showcmd = false
+vim.o.autoread = true
+vim.o.splitright = true
+vim.o.splitbelow = true
+vim.opt.iskeyword:append '-'
+vim.o.fileencoding = 'utf-8'
+vim.o.showmode = false
+vim.o.timeoutlen = 1000
+vim.o.cmdheight = 1
+vim.o.virtualedit = 'block'
+vim.o.list = true
+vim.o.listchars = 'tab:→ ,leadmultispace:·,eol:↙'
+vim.o.laststatus = 3
 vim.o.ch = 1
