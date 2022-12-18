@@ -4,7 +4,8 @@ local present, catppuccin = pcall(require, 'catppuccin')
 if not present then return end
 
 catppuccin.setup {
-	flavour = 'macchiato', -- latte, frappe, macchiato, mocha
+	flavour = 'mocha', -- latte, frappe, macchiato, mocha
+	transparent_background = true,
 	styles = {
 		comments = { 'italic' },
 		conditionals = { 'italic' },

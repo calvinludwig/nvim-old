@@ -75,25 +75,16 @@ cmp.setup {
 
 cmp.setup.cmdline({ '/', '?' }, {
 	mapping = cmp.mapping.preset.cmdline(),
-	sources = {
-		{ name = 'buffer' },
-	},
-})
-
-require('cmp_git').setup()
-cmp.setup.filetype('gitcommit', {
-	sources = cmp.config.sources({
-		{ name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
-	}, {
-		{ name = 'buffer' },
-	}),
+	sources = { { name = 'buffer' } },
 })
 
 cmp.setup.cmdline(':', {
 	mapping = cmp.mapping.preset.cmdline(),
-	sources = cmp.config.sources({
-		{ name = 'path' },
-	}, {
-		{ name = 'cmdline' },
-	}),
+	sources = cmp.config.sources({ { name = 'path' } }, { { name = 'cmdline' } }),
+})
+
+require('cmp_git').setup()
+
+cmp.setup.filetype('gitcommit', {
+    sources = cmp.config.sources({ { name = 'cmp_git' } }, { { name = 'buffer' } }),
 })
