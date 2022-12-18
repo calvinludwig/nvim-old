@@ -1,4 +1,4 @@
-require('packer').startup(function(use)
+return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'nvim-lua/plenary.nvim'
 
@@ -62,8 +62,3 @@ require('packer').startup(function(use)
 	use 'ThePrimeagen/vim-be-good'
 	use 'jwalton512/vim-blade'
 end)
-
-require 'user.lsp'
-require 'user.editor'
-require 'user.ui'
-require 'user.components'

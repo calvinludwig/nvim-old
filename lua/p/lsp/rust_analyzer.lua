@@ -1,5 +1,4 @@
-local path = 'user.lsp.servers'
-local common = require(path .. '.common')
+local common = require('p.lsp.common')
 
 require('mason-lspconfig').setup {
 	ensure_installed = { 'rust_analyzer' },

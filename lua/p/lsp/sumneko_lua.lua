@@ -1,5 +1,4 @@
-local path = 'user.lsp.servers'
-local common = require(path .. '.common')
+local common = require('p.lsp.common')
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')

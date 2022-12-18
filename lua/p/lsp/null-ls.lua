@@ -1,6 +1,6 @@
 local null_ls = require 'null-ls'
 local mason_null_ls = require 'mason-null-ls'
-local common = require 'user.lsp.servers.common'
+local common = require 'p.lsp.common'
 
 local code_actions = null_ls.builtins.code_actions
 local diagnostics = null_ls.builtins.diagnostics
