@@ -15,6 +15,7 @@ local servers = {
 	'sumneko_lua',
 	'rust_analyzer',
 	'intelephense',
+	'sqls',
 	'gopls',
 	'html',
 	'tsserver',

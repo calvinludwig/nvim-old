@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
 	use 'williamboman/mason-lspconfig.nvim'
 	use 'neovim/nvim-lspconfig'
 	use 'simrat39/rust-tools.nvim'
+	use 'nanotee/sqls.nvim'
 
 	-- CMP
 	use 'hrsh7th/nvim-cmp'
