@@ -1,6 +1,8 @@
 require 'p.packer'
 
 require 'p.notify'
+require 'p.noice'
+require 'p.dressing'
 
 require 'p.lsp'
 require 'p.cmp'

@@ -25,10 +25,12 @@ return require('packer').startup(function(use)
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'rafamadriz/friendly-snippets'
 
+	-- ui
 	use 'kyazdani42/nvim-web-devicons'
 	use { 'catppuccin/nvim', as = 'catppuccin' }
 	use 'feline-nvim/feline.nvim'
-
+	use { 'folke/noice.nvim', requires = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' } }
+	use 'stevearc/dressing.nvim'
 	-- telescope
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
