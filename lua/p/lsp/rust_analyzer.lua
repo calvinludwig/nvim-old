@@ -1,9 +1,5 @@
 local common = require 'p.lsp.common'
 
-require('mason-lspconfig').setup {
-	ensure_installed = { 'rust_analyzer' },
-}
-
 local rt = require 'rust-tools'
 rt.setup {
 	server = {

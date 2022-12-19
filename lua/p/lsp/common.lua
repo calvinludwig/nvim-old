@@ -49,12 +49,8 @@ M.on_attach = function(client, bufnr)
 		end
 	end
 
-	vim.keymap.set('n', '<leader>F', Format, opts)
+	nmap('<leader>F', Format, '[F]ormat code')
 	vim.api.nvim_buf_create_user_command(bufnr, 'Format', Format, { desc = 'Format current buffer with LSP' })
-
-	vim.notify(client.name, 'success', {
-		render = 'minimal',
-	})
 end
 
 return M

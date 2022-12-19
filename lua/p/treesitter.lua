@@ -61,3 +61,5 @@ treesitter.setup {
 		},
 	},
 }
+
+require('treesitter-context').setup { enabled = true }

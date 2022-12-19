@@ -1,5 +1,7 @@
 local telescope = require 'telescope'
 local builtin = require 'telescope.builtin'
+local actions = require("telescope.actions")
+local trouble = require("trouble.providers.telescope")
 
 telescope.setup {
 	extensions = {
@@ -7,6 +9,12 @@ telescope.setup {
 			require('telescope.themes').get_dropdown {
 				-- even more opts
 			},
+		},
+	},
+	defaults = {
+		mappings = {
+			i = { ['<c-t>'] = trouble.open_with_trouble },
+			n = { ['<c-t>'] = trouble.open_with_trouble },
 		},
 	},
 }

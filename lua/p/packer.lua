@@ -2,6 +2,7 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'nvim-lua/plenary.nvim'
 	use 'lewis6991/impatient.nvim'
+	use 'dstein64/vim-startuptime'
 
 	-- LSP
 	use 'williamboman/mason.nvim'
@@ -29,20 +30,23 @@ return require('packer').startup(function(use)
 	use 'kyazdani42/nvim-web-devicons'
 	use { 'catppuccin/nvim', as = 'catppuccin' }
 	use 'feline-nvim/feline.nvim'
-	use { 'folke/noice.nvim', requires = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' } }
+	use 'rcarriga/nvim-notify'
 	use 'stevearc/dressing.nvim'
+	use { 'folke/noice.nvim', requires = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' } }
+	use 'folke/trouble.nvim'
+
 	-- telescope
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	use { 'nvim-telescope/telescope-file-browser.nvim' }
 	use { 'nvim-telescope/telescope-ui-select.nvim' }
 	use 'ThePrimeagen/harpoon'
-	use 'rcarriga/nvim-notify'
 
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = function() require('nvim-treesitter.install').update { with_sync = true } end,
 	}
+	use 'nvim-treesitter/nvim-treesitter-context'
 	use 'JoosepAlviste/nvim-ts-context-commentstring'
 	use 'windwp/nvim-autopairs'
 	use 'windwp/nvim-ts-autotag'

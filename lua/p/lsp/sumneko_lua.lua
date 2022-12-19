@@ -4,10 +4,6 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require('mason-lspconfig').setup {
-	ensure_installed = { 'sumneko_lua' },
-}
-
 require('lspconfig').sumneko_lua.setup {
 	on_attach = common.on_attach,
 	capabilities = common.capabilities,
