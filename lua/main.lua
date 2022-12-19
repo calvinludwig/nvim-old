@@ -1,5 +1,5 @@
-vim.notify = require("notify")
+vim.notify = require "notify"
 
-require("keymaps")
-require("options")
-require("p")
+require "keymaps"
+require "options"
+require "p"
