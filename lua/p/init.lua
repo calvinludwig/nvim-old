@@ -1,6 +1,5 @@
 require "p.packer"
 
-
 require "p.notify"
 
 require "p.lsp"
