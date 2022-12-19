@@ -1,5 +1,8 @@
 require "p.packer"
 
+
+require "p.notify"
+
 require "p.lsp"
 require "p.cmp"
 

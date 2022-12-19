@@ -1,12 +1,12 @@
 return require("packer").startup(function(use)
 	use "wbthomason/packer.nvim"
 	use "nvim-lua/plenary.nvim"
+	use "lewis6991/impatient.nvim"
 
 	-- LSP
 	use "williamboman/mason.nvim"
 	use "williamboman/mason-lspconfig.nvim"
 	use "neovim/nvim-lspconfig"
-	use "j-hui/fidget.nvim"
 	use "simrat39/rust-tools.nvim"
 
 	-- CMP
