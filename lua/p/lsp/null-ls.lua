@@ -1,6 +1,6 @@
-local null_ls = require "null-ls"
-local mason_null_ls = require "mason-null-ls"
-local common = require "p.lsp.common"
+local null_ls = require 'null-ls'
+local mason_null_ls = require 'mason-null-ls'
+local common = require 'p.lsp.common'
 
 local code_actions = null_ls.builtins.code_actions
 local diagnostics = null_ls.builtins.diagnostics
@@ -18,7 +18,7 @@ null_ls.setup {
 		diagnostics.php,
 		diagnostics.phpstan,
 		formatting.pint.with {
-			command = "pint",
+			command = 'pint',
 		},
 		-- go
 		diagnostics.golangci_lint,
@@ -34,7 +34,7 @@ null_ls.setup {
 }
 mason_null_ls.setup {
 	ensure_installed = {
-		"stylua",
-		"luacheck",
+		'stylua',
+		'luacheck',
 	},
 }

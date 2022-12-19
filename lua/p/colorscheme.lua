@@ -1,14 +1,14 @@
-vim.g.background = "dark"
+vim.g.background = 'dark'
 
-local present, catppuccin = pcall(require, "catppuccin")
+local present, catppuccin = pcall(require, 'catppuccin')
 if not present then return end
 
 catppuccin.setup {
-	flavour = "mocha", -- latte, frappe, macchiato, mocha
+	flavour = 'mocha', -- latte, frappe, macchiato, mocha
 	transparent_background = true,
 	styles = {
-		comments = { "italic" },
-		conditionals = { "italic" },
+		comments = { 'italic' },
+		conditionals = { 'italic' },
 		loops = {},
 		functions = {},
 		keywords = {},
@@ -37,4 +37,4 @@ catppuccin.setup {
 	},
 }
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme 'catppuccin'

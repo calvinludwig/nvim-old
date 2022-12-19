@@ -1,2 +1,4 @@
-require "impatient"
-require "main"
+require 'impatient'
+require 'options'
+require 'keymaps'
+require 'p'
