@@ -1,7 +1,5 @@
-require 'p.packer'
-
 require 'p.notify'
-require 'p.noice'
+-- require 'p.noice'
 require 'p.dressing'
 
 require 'p.lsp'

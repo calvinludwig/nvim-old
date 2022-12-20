@@ -1,4 +1,4 @@
-vim.notify = require 'notify'
+-- vim.notify = require 'notify'
 
 vim.opt.guifont= 'JetbrainsMono Nerd Font'
 vim.wo.relativenumber = true
