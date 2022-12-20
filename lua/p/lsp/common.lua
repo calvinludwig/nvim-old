@@ -9,7 +9,7 @@ local function define_signs()
 	vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
 end
 
-M.on_attach = function(client, bufnr)
+M.on_attach = function(_, bufnr)
 	define_signs()
 	local telescope = require 'telescope.builtin'
 

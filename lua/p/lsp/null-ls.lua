@@ -22,7 +22,7 @@ null_ls.setup {
 		},
 		-- go
 		diagnostics.golangci_lint,
-		diagnostics.revive,
+		-- diagnostics.revive,
 		diagnostics.staticcheck,
 		formatting.gofmt,
 		formatting.goimports,
