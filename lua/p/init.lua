@@ -13,5 +13,6 @@ require 'p.gitsigns'
 
 require 'p.telescope'
 require 'p.harpoon'
-require 'p.feline'
+-- require 'p.feline'
+require 'p.lualine'
 require 'p.trouble'

@@ -1,10 +1,8 @@
-vim.g.background = 'light'
-
 local present, catppuccin = pcall(require, 'catppuccin')
 if not present then return end
 
 catppuccin.setup {
-	flavour = 'frappe', -- latte, frappe, macchiato, mocha
+	flavour = 'mocha', -- latte, frappe, macchiato, mocha
 	transparent_background = false,
 	styles = {
 		comments = { 'italic' },
@@ -23,7 +21,20 @@ catppuccin.setup {
 	no_italic = false,
 	no_bold = false,
 	color_overrides = {
-		macchiato = {},
+		mocha = {
+			text = '#f5f5f5',
+			subtext1 = '#dedede',
+			subtext0 = '#c7c7c7',
+			overlay2 = '#b3b3b3',
+			overlay1 = '#9c9c9c',
+			overlay0 = '#878787',
+			surface2 = '#707070',
+			surface1 = '#595959',
+			surface0 = '#454545',
+			base = '#2e2e2e',
+			mantle = '#262626',
+			crust = '#1c1c1c',
+		},
 	},
 	custom_highlights = {},
 	integrations = {

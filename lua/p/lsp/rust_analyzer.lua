@@ -13,5 +13,12 @@ rt.setup {
 				render = 'minimal',
 			})
 		end,
+		settings = {
+			['rust-analyzer'] = {
+				checkOnSave = {
+					command = 'clippy',
+				},
+			},
+		},
 	},
 }

@@ -29,6 +29,7 @@ return {
 	'kyazdani42/nvim-web-devicons',
 	{ 'catppuccin/nvim', name = 'catppuccin' },
 	'feline-nvim/feline.nvim',
+    'nvim-lualine/lualine.nvim',
 	'rcarriga/nvim-notify',
 	'stevearc/dressing.nvim',
 	{ 'folke/noice.nvim', dependencies = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' } },
