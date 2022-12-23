@@ -1,5 +1,5 @@
-vim.keymap.set('i', 'jk', '<ESC>')
-vim.keymap.set('i', 'kj', '<ESC>')
+-- vim.keymap.set('i', 'jk', '<ESC>')
+-- vim.keymap.set('i', 'kj', '<ESC>')
 
 vim.keymap.set('n', '<Esc>', function()
 	vim.cmd.nohlsearch()
@@ -29,7 +29,3 @@ vim.keymap.set('n', '<leader>sx', ':close<CR>', { desc = 'Close current window' 
 vim.keymap.set('n', '<leader><Tab>', ':bn<CR>', { desc = 'Next buffer' }) --  go to next buffer
 vim.keymap.set('n', '<leader><s-Tab>', ':bp<CR>', { desc = 'Previous buffer' }) --  go to previous buffer
 vim.keymap.set('n', '<leader>q', ':bd<CR>', { desc = 'Close buffer' }) --  go to previous buffer
-
-vim.keymap.set('n', '<leader>l', function() vim.o.list = not vim.o.list end)
-
-vim.keymap.set('n', '<leader>gg', function() vim.cmd 'Gitsigns toggle_signs' end)

@@ -1,7 +1,10 @@
-local telescope = require 'telescope'
+local telescope_exists, telescope = pcall(require, 'telescope')
+if not telescope_exists then
+	vim.notify('plugin telescope not installed', 'error')
+	return
+end
 local builtin = require 'telescope.builtin'
-local actions= require("telescope.actions")
-local trouble = require("trouble.providers.telescope")
+local actions = require 'telescope.actions'
 
 telescope.setup {
 	extensions = {
@@ -11,13 +14,22 @@ telescope.setup {
 			},
 		},
 	},
-	defaults = {
-		mappings = {
-			i = { ['<c-t>'] = trouble.open_with_trouble },
-			n = { ['<c-t>'] = trouble.open_with_trouble },
-		},
-	},
 }
+
+local trouble_exists, trouble = pcall(require, 'trouble.providers.telescope')
+if not trouble_exists then
+	vim.notify('plugin trouble not installed', 'error')
+	return
+else
+	telescope.setup {
+		defaults = {
+			mappings = {
+				i = { ['<c-t>'] = trouble.open_with_trouble },
+				n = { ['<c-t>'] = trouble.open_with_trouble },
+			},
+		},
+	}
+end
 
 telescope.load_extension 'fzf'
 telescope.load_extension 'file_browser'

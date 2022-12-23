@@ -1,6 +1,6 @@
 return {
-    'nvim-lua/plenary.nvim',
-    	'dstein64/vim-startuptime',
+	'nvim-lua/plenary.nvim',
+	'dstein64/vim-startuptime',
 
 	-- LSP
 	'williamboman/mason.nvim',
@@ -29,7 +29,7 @@ return {
 	'kyazdani42/nvim-web-devicons',
 	{ 'catppuccin/nvim', name = 'catppuccin' },
 	'feline-nvim/feline.nvim',
-    'nvim-lualine/lualine.nvim',
+	'nvim-lualine/lualine.nvim',
 	'rcarriga/nvim-notify',
 	'stevearc/dressing.nvim',
 	{ 'folke/noice.nvim', dependencies = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' } },
@@ -40,11 +40,11 @@ return {
 	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 	'nvim-telescope/telescope-file-browser.nvim',
 	'nvim-telescope/telescope-ui-select.nvim',
-	
+
 	-- treesitter
 	'ThePrimeagen/harpoon',
 	{
-	    'nvim-treesitter/nvim-treesitter',
+		'nvim-treesitter/nvim-treesitter',
 		build = function() require('nvim-treesitter.install').update { with_sync = true } end,
 	},
 	'nvim-treesitter/nvim-treesitter-context',
@@ -68,5 +68,4 @@ return {
 
 	'ThePrimeagen/vim-be-good',
 	'jwalton512/vim-blade',
-
 }

@@ -1,9 +1,26 @@
-local treesitter = require 'nvim-treesitter.configs'
+local treesitter_exists, treesitter = pcall(require, 'nvim-treesitter.configs')
+if not treesitter_exists then
+	vim.notify('plugin treesitter not installed', 'error')
+	return
+end
 
 -- configure treesitter
 treesitter.setup {
 	-- Add languages to be installed here that you want installed for treesitter
-	ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help' },
+	ensure_installed = {
+		'c',
+		'cpp',
+		'go',
+		'lua',
+		'python',
+		'rust',
+		'typescript',
+		'help',
+		'regex',
+		'bash',
+		'markdown',
+		'markdown_inline',
+	},
 
 	highlight = { enable = true, additional_vim_regex_highlighting = false },
 	indent = { enable = true },
@@ -62,4 +79,10 @@ treesitter.setup {
 	},
 }
 
-require('treesitter-context').setup { enabled = true }
+local ts_context_exists, ts_context = pcall(require, 'treesitter-context')
+if not ts_context_exists then
+	vim.notify('plugin ts_context not installed', 'error')
+	return
+end
+
+ts_context.setup { enabled = true }

@@ -1,6 +1,11 @@
+local rt_exists, rt = pcall(require, 'rust-tools')
+if not rt_exists then
+	vim.notify('plugin rust-tools not installed', 'error')
+	return
+end
+
 local common = require 'p.lsp.common'
 
-local rt = require 'rust-tools'
 rt.setup {
 	server = {
 		on_attach = function(client, bufnr)

@@ -1,3 +1,9 @@
+local harpoon_exists, _ = pcall(require, 'harpoon')
+if not harpoon_exists then
+	vim.notify('plugin harpoon not installed', 'error')
+	return
+end
+
 local ui = require 'harpoon.ui'
 local mark = require 'harpoon.mark'
 

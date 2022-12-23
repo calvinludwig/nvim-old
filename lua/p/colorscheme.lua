@@ -1,15 +1,17 @@
-local present, catppuccin = pcall(require, 'catppuccin')
-if not present then return end
-
+local catppuccin_exists, catppuccin = pcall(require, 'catppuccin')
+if not catppuccin_exists then
+	vim.notify('plugin catppuccin not installed', 'error')
+	return
+end
 catppuccin.setup {
 	flavour = 'mocha', -- latte, frappe, macchiato, mocha
-	transparent_background = false,
+	transparent_background = true,
 	styles = {
 		comments = { 'italic' },
 		conditionals = { 'italic' },
 		loops = {},
 		functions = {},
-		keywords = { 'italic' },
+		keywords = {},
 		strings = {},
 		variables = {},
 		numbers = {},

@@ -1,4 +1,8 @@
-local gitsigns = require 'gitsigns'
+local gitsigns_exists, gitsigns = pcall(require, 'gitsigns')
+if not gitsigns_exists then
+	vim.notify('plugin gitsigns not installed', 'error')
+	return
+end
 
 gitsigns.setup {
 	signs = {
@@ -8,4 +12,13 @@ gitsigns.setup {
 		topdelete = { text = '‾' },
 		changedelete = { text = '~' },
 	},
+	on_attach = function(bufnr)
+		local function map(mode, l, r, opts)
+			opts = opts or {}
+			opts.buffer = bufnr
+			vim.keymap.set(mode, l, r, opts)
+		end
+
+		map('n', '<leader>gg', ':Gitsigns toggle_signs<CR>')
+	end,
 }
