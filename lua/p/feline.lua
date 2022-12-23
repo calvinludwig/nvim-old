@@ -10,11 +10,15 @@ if not ctp_feline_exists then
 	feline.setup {}
 	return
 else
+	local U = require 'catppuccin.utils.colors'
+	local mocha = require('catppuccin.palettes').get_palette 'mocha'
+	local clrs = require('catppuccin.palettes').get_palette()
+
 	ctp_feline.setup {
 		assets = {
-			left_separator = '',
-			right_separator = ' ',
-			bar = '',
+			left_separator = '',
+			right_separator = '',
+			bar = '█',
 			mode_icon = '  ',
 			dir = '  ',
 			file = '   ',
@@ -31,6 +35,9 @@ else
 				changed = '  ',
 				removed = '  ',
 			},
+		},
+		sett = {
+			bkg = U.vary_color({ mocha = mocha.mantle }),
 		},
 	}
 
