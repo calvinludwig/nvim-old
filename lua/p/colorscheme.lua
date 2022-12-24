@@ -5,7 +5,7 @@ if not catppuccin_exists then
 end
 catppuccin.setup {
 	flavour = 'mocha', -- latte, frappe, macchiato, mocha
-	transparent_background = true,
+	transparent_background = false,
 	styles = {
 		comments = { 'italic' },
 		conditionals = { 'italic' },
@@ -65,7 +65,7 @@ catppuccin.setup {
 		neotree = false,
 		noice = true,
 		notify = true,
-		nvimtree = false,
+		nvimtree = true,
 		overseer = false,
 		pounce = false,
 		semantic_tokens = false,

@@ -6,6 +6,11 @@ vim.keymap.set('n', '<Esc>', function()
 	vim.cmd.echo()
 end)
 
+vim.keymap.set({ 'i', 'n' }, '<up>', '<Nop>')
+vim.keymap.set({ 'i', 'n' }, '<down>', '<Nop>')
+vim.keymap.set({ 'i', 'n' }, '<left>', '<Nop>')
+vim.keymap.set({ 'i', 'n' }, '<right>', '<Nop>')
+
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 

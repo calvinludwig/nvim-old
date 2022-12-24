@@ -1,4 +1,4 @@
-vim.opt.guifont = 'JetbrainsMono Nerd Font'
+vim.opt.guifont = 'Iosevka'
 vim.wo.relativenumber = true
 vim.wo.number = true
 vim.wo.numberwidth = 4
@@ -24,8 +24,8 @@ vim.opt.isfname:append '@-@'
 vim.o.updatetime = 50
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.cursorline = false
-vim.o.cursorcolumn = false
+vim.o.cursorline = true
+vim.o.cursorcolumn = true
 vim.o.backspace = 'indent,eol,start'
 vim.o.showcmd = false
 vim.o.autoread = true
