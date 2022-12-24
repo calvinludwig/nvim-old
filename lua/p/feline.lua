@@ -12,13 +12,15 @@ if not ctp_feline_exists then
 else
 	local U = require 'catppuccin.utils.colors'
 	local mocha = require('catppuccin.palettes').get_palette 'mocha'
-	local clrs = require('catppuccin.palettes').get_palette()
+	local macchiato = require('catppuccin.palettes').get_palette 'macchiato'
+	local frappe = require('catppuccin.palettes').get_palette 'frappe'
+	local latte = require('catppuccin.palettes').get_palette 'latte'
 
 	ctp_feline.setup {
 		assets = {
-			left_separator = '',
-			right_separator = '',
-			bar = '█',
+			left_separator = '',
+			right_separator = '',
+			bar = '',
 			mode_icon = '  ',
 			dir = '  ',
 			file = '   ',
@@ -37,7 +39,12 @@ else
 			},
 		},
 		sett = {
-			bkg = U.vary_color({ mocha = mocha.mantle }),
+			bkg = U.vary_color {
+				mocha = mocha.mantle,
+				macchiato = macchiato.mantle,
+				frappe = frappe.mantle,
+				latte = latte.mantle,
+			},
 		},
 	}
 

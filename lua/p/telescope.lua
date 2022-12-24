@@ -6,12 +6,26 @@ end
 local builtin = require 'telescope.builtin'
 local actions = require 'telescope.actions'
 
-telescope.setup {
+local options = {
+	defaults = {
+		sorting_strategy = 'ascending',
+		layout_strategy = 'horizontal',
+		layout_config = {
+			horizontal = {
+				prompt_position = 'top',
+			},
+			vertical = {
+				mirror = false,
+			},
+		},
+		borderchars = { '━', '┃', '━', '┃', '┏', '┓', '┛', '┗' },
+		color_devicons = true,
+		file_sorter = require('telescope.sorters').get_fuzzy_file,
+		generic_sorter = require('telescope.sorters').get_generic_fuzzy_sorter,
+	},
 	extensions = {
 		['ui-select'] = {
-			require('telescope.themes').get_dropdown {
-				-- even more opts
-			},
+			require('telescope.themes').get_dropdown {},
 		},
 	},
 }
@@ -21,19 +35,18 @@ if not trouble_exists then
 	vim.notify('plugin trouble not installed', 'error')
 	return
 else
-	telescope.setup {
-		defaults = {
-			mappings = {
-				i = { ['<c-t>'] = trouble.open_with_trouble },
-				n = { ['<c-t>'] = trouble.open_with_trouble },
-			},
-		},
+	options.defaults.mappings = {
+		i = { ['<c-t>'] = trouble.open_with_trouble },
+		n = { ['<c-t>'] = trouble.open_with_trouble },
 	}
 end
+
+telescope.setup(options)
 
 telescope.load_extension 'fzf'
 telescope.load_extension 'file_browser'
 telescope.load_extension 'ui-select'
+telescope.load_extension 'harpoon'
 
 -- See `:help telescope.builtin`
 

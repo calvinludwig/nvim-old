@@ -3,15 +3,16 @@ if not catppuccin_exists then
 	vim.notify('plugin catppuccin not installed', 'error')
 	return
 end
+
 catppuccin.setup {
-	flavour = 'mocha', -- latte, frappe, macchiato, mocha
+	flavour = 'macchiato', -- latte, frappe, macchiato, mocha
 	transparent_background = false,
 	styles = {
 		comments = { 'italic' },
 		conditionals = { 'italic' },
 		loops = {},
 		functions = {},
-		keywords = {},
+		keywords = { 'italic' },
 		strings = {},
 		variables = {},
 		numbers = {},
@@ -37,8 +38,47 @@ catppuccin.setup {
 			mantle = '#262626',
 			crust = '#1c1c1c',
 		},
+		macchiato = {
+			rosewater = '#fecdd3',
+			flamingo = '#f0abfc',
+			pink = '#f9a8d4',
+			mauve = '#c4b5fd',
+			red = '#fca5a5',
+			maroon = '#fecaca',
+			peach = '#fdba74',
+			yellow = '#fef08a',
+			green = '#86efac',
+			teal = '#5eead4',
+			sky = '#67e8f9',
+			sapphire = '#7dd3fc',
+			blue = '#93c5fd',
+			lavender = '#a5b4fc',
+			text = '#ffffff',
+			subtext1 = '#fafafa',
+			subtext0 = '#f5f5f5',
+			overlay2 = '#e5e5e5',
+			overlay1 = '#d4d4d4',
+			overlay0 = '#a3a3a3',
+			surface2 = '#737373',
+			surface1 = '#525252',
+			surface0 = '#404040',
+			base = '#262626',
+			mantle = '#1f1f1f',
+			crust = '#171717',
+		},
 	},
-	custom_highlights = {},
+	highlight_overrides = {
+		all = function(colors)
+			return {
+				CursorColumn = { bg = colors.surface0 },
+				CursorLine = { bg = colors.surface0 },
+				TelescopePromptNormal = { bg = colors.mantle, fg = colors.peach },
+				TelescopePromptBorder = { bg = colors.mantle, fg = colors.peach },
+				TelescopeNormal = { bg = colors.mantle },
+				TelescopeBorder = { bg = colors.mantle },
+			}
+		end,
+	},
 	integrations = {
 		aerial = false,
 		barbar = false,
