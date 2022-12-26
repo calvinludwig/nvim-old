@@ -60,7 +60,7 @@ vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles
 vim.keymap.set(
 	'n',
 	'<leader>fb',
-	require('telescope').extensions.file_browser.file_browser,
+	function() require('telescope').extensions.file_browser.file_browser { path = '%:p:h' } end,
 	{ desc = '[S]earch [F]iles' }
 )
 vim.keymap.set('n', '<c-p>', builtin.git_files, { desc = '[S]earch [F]iles' })
