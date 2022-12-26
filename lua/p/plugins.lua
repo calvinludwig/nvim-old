@@ -1,5 +1,6 @@
 return {
 	'nvim-lua/plenary.nvim',
+    'kyazdani42/nvim-web-devicons',
 
 	-- LSP
 	'williamboman/mason.nvim',
@@ -26,13 +27,12 @@ return {
 	'rafamadriz/friendly-snippets',
 
 	-- ui
-	'kyazdani42/nvim-web-devicons',
 	{ 'catppuccin/nvim', name = 'catppuccin' },
-	'feline-nvim/feline.nvim',
-
 	'rcarriga/nvim-notify',
 	'folke/trouble.nvim',
+    'feline-nvim/feline.nvim',
 	{ 'akinsho/bufferline.nvim', version = 'v3.*' },
+    'lewis6991/gitsigns.nvim',
 
 	-- telescope
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.0' },
@@ -47,11 +47,10 @@ return {
 		build = function() require('nvim-treesitter.install').update { with_sync = true } end,
 	},
 	'nvim-treesitter/nvim-treesitter-context',
-	'JoosepAlviste/nvim-ts-context-commentstring',
-	'windwp/nvim-autopairs',
-	'windwp/nvim-ts-autotag',
 	'numToStr/Comment.nvim',
-	'lewis6991/gitsigns.nvim',
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    'windwp/nvim-autopairs',
+    'windwp/nvim-ts-autotag',
 
 	'ThePrimeagen/vim-be-good',
 	'jwalton512/vim-blade',

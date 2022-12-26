@@ -1,7 +1,8 @@
 vim.opt.guifont = 'Iosevka'
+vim.opt.completeopt = "menu,menuone,noinsert"
 vim.wo.relativenumber = true
 vim.wo.number = true
-vim.wo.numberwidth = 4
+vim.wo.numberwidth = 1
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
@@ -24,8 +25,8 @@ vim.opt.isfname:append '@-@'
 vim.o.updatetime = 50
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.cursorline = true
-vim.o.cursorcolumn = true
+-- vim.o.cursorline = true
+-- vim.o.cursorcolumn = true
 vim.o.backspace = 'indent,eol,start'
 vim.o.showcmd = false
 vim.o.autoread = true

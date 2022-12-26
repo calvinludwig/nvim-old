@@ -50,10 +50,10 @@ cmp.setup {
 		end, { 'i', 's' }),
 	},
 	sources = cmp.config.sources({
-		{ name = 'nvim_lua' },
-		{ name = 'nvim_lsp' },
-		{ name = 'nvim_lsp_document_symbol' },
-		{ name = 'nvim_lsp_signature_help' },
+        { name = 'nvim_lsp' },
+        { name = 'nvim_lsp_signature_help' },
+        { name = 'nvim_lsp_document_symbol' },
+        { name = 'nvim_lua' },
 		{ name = 'luasnip' },
 	}, {
 		{ name = 'buffer', keyword_length = 3 },
@@ -75,14 +75,6 @@ else
 	cmp.setup {
 		formatting = {
 			format = function(entry, vim_item)
-				-- if vim.tbl_contains({ 'path' }, entry.source.name) then
-				-- 	local icon, hl_group = require('nvim-web-devicons').get_icon(entry:get_completion_item().label)
-				-- 	if icon then
-				-- 		vim_item.kind = icon
-				-- 		vim_item.kind_hl_group = hl_group
-				-- 		return vim_item
-				-- 	end
-				-- end
 				return lspkind.cmp_format {
 					mode = 'symbol_text',
 					menu = {

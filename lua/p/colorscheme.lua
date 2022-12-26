@@ -5,7 +5,7 @@ if not catppuccin_exists then
 end
 
 catppuccin.setup {
-	flavour = 'macchiato', -- latte, frappe, macchiato, mocha
+	flavour = 'frappe', -- latte, frappe, macchiato, mocha
 	transparent_background = false,
 	styles = {
 		comments = { 'italic' },
