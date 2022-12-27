@@ -1,6 +1,6 @@
 return {
 	'nvim-lua/plenary.nvim',
-    'kyazdani42/nvim-web-devicons',
+	'kyazdani42/nvim-web-devicons',
 
 	-- LSP
 	'williamboman/mason.nvim',
@@ -26,13 +26,19 @@ return {
 	'saadparwaiz1/cmp_luasnip',
 	'rafamadriz/friendly-snippets',
 
-	-- ui
+	-- colorschemes
 	{ 'catppuccin/nvim', name = 'catppuccin' },
+	{
+		'jesseleite/nvim-noirbuddy',
+		dependencies = { 'tjdevries/colorbuddy.nvim', branch = 'dev' },
+	},
+
+	-- ui
 	'rcarriga/nvim-notify',
 	'folke/trouble.nvim',
-    'feline-nvim/feline.nvim',
+	'feline-nvim/feline.nvim',
 	{ 'akinsho/bufferline.nvim', version = 'v3.*' },
-    'lewis6991/gitsigns.nvim',
+	'lewis6991/gitsigns.nvim',
 
 	-- telescope
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.0' },
@@ -48,9 +54,9 @@ return {
 	},
 	'nvim-treesitter/nvim-treesitter-context',
 	'numToStr/Comment.nvim',
-    'JoosepAlviste/nvim-ts-context-commentstring',
-    'windwp/nvim-autopairs',
-    'windwp/nvim-ts-autotag',
+	'JoosepAlviste/nvim-ts-context-commentstring',
+	'windwp/nvim-autopairs',
+	'windwp/nvim-ts-autotag',
 
 	'ThePrimeagen/vim-be-good',
 	'jwalton512/vim-blade',

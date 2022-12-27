@@ -16,7 +16,8 @@ require 'p.luasnip'
 require 'p.cmp'
 require 'p.lsp'
 
-require 'p.colorscheme'
+-- require 'p.catppuccin'
+require 'p.noirbuddy'
 require 'p.gitsigns'
 
 require 'p.telescope'

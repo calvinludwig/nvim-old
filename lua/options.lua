@@ -18,7 +18,7 @@ vim.o.undofile = true
 vim.o.hlsearch = true
 vim.o.incsearch = true
 vim.o.termguicolors = true
-vim.o.scrolloff = 4
+vim.o.scrolloff = 12
 vim.o.pumheight = 8
 vim.wo.signcolumn = 'number'
 vim.opt.isfname:append '@-@'
@@ -38,7 +38,7 @@ vim.o.conceallevel = 0
 vim.o.showmode = false
 vim.o.timeoutlen = 500
 vim.o.cmdheight = 1
-vim.o.virtualedit = 'block'
+vim.o.virtualedit = 'all'
 vim.o.list = false
 vim.o.listchars = 'tab:→ ,leadmultispace:·,eol:↙'
 vim.o.laststatus = 3
