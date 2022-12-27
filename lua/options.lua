@@ -25,8 +25,8 @@ vim.opt.isfname:append '@-@'
 vim.o.updatetime = 50
 vim.o.ignorecase = true
 vim.o.smartcase = true
--- vim.o.cursorline = true
--- vim.o.cursorcolumn = true
+vim.o.cursorline = true
+vim.o.cursorcolumn = true
 vim.o.backspace = 'indent,eol,start'
 vim.o.showcmd = false
 vim.o.autoread = true
