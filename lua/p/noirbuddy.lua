@@ -6,8 +6,7 @@ end
 
 noir.setup {
 	colors = {
-		primary = '#818cf8',
-		secondary = '#38bdf8',
+		primary = '#db2777',
 		noir_0 = '#ffffff', -- `noir_0` is light for dark themes, and dark for light themes
 		noir_1 = '#e8e8e8',
 		noir_2 = '#d1d1d1',
@@ -34,11 +33,13 @@ local colors = colorbuddy.colors
 local Group = colorbuddy.Group
 
 Color.new('dark', '#0e0e0e')
-Color.new('green', '#86efac')
+Color.new('green', '#059669')
+Color.new('dark_indigo', '#713f12')
 
 -- Override specific highlight groups...
 Group.new('TelescopeTitle', colors.primary)
-Group.new('@comment', colors.noir_8)
+Group.new('@comment', colors.dark_indigo:dark())
+Group.new('Comment', colors.dark_indigo)
 Group.new('CursorLineNr', colors.secondary, colors.dark)
 Group.new('CursorLine', nil, colors.dark)
 Group.new('CursorColumn', nil, colors.dark)
