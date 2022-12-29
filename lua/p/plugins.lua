@@ -27,11 +27,11 @@ return {
 	'rafamadriz/friendly-snippets',
 
 	-- colorschemes
-	-- { 'catppuccin/nvim', name = 'catppuccin' },
-	{
-		'jesseleite/nvim-noirbuddy',
-		dependencies = { 'tjdevries/colorbuddy.nvim', branch = 'dev' },
-	},
+	{ 'catppuccin/nvim', name = 'catppuccin' },
+	-- {
+	-- 	'jesseleite/nvim-noirbuddy',
+	-- 	dependencies = { 'tjdevries/colorbuddy.nvim', branch = 'dev' },
+	-- },
 
 	-- ui
 	'rcarriga/nvim-notify',

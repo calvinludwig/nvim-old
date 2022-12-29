@@ -165,3 +165,26 @@ catppuccin.setup {
 }
 
 vim.cmd.colorscheme 'catppuccin'
+
+local feline_exists, feline = pcall(require, 'feline')
+if not feline_exists then
+	vim.notify('plugin feline not installed', 'error')
+	return
+end
+
+local clrs = require('catppuccin.palettes').get_palette()
+local ctp_feline = require 'catppuccin.groups.integrations.feline'
+local U = require 'catppuccin.utils.colors'
+
+ctp_feline.setup {
+	assets = {
+		left_separator = '',
+		right_separator = '',
+		bar = '',
+		mode_icon = ' ',
+	},
+}
+
+feline.setup {
+	components = ctp_feline.get(),
+}

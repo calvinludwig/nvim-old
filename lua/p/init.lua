@@ -16,12 +16,10 @@ require 'p.luasnip'
 require 'p.cmp'
 require 'p.lsp'
 
--- require 'p.catppuccin'
-require 'p.noirbuddy'
+require 'p.catppuccin'
 require 'p.gitsigns'
 
 require 'p.telescope'
 require 'p.harpoon'
-require 'p.feline'
 require 'p.bufferline'
 require 'p.trouble'
