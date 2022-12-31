@@ -60,4 +60,5 @@ return {
 
 	'ThePrimeagen/vim-be-good',
 	'jwalton512/vim-blade',
+	'shortcuts/no-neck-pain.nvim',
 }
