@@ -5,7 +5,7 @@ if not catppuccin_exists then
 end
 
 catppuccin.setup {
-	flavour = 'frappe', -- latte, frappe, macchiato, mocha
+	flavour = 'mocha', -- latte, frappe, macchiato, mocha
 	transparent_background = false,
 	styles = {
 		comments = { 'italic' },
@@ -23,64 +23,6 @@ catppuccin.setup {
 	},
 	no_italic = false,
 	no_bold = false,
-	color_overrides = {
-		macchiato = {
-			rosewater = '#fecdd3',
-			flamingo = '#f0abfc',
-			pink = '#f9a8d4',
-			mauve = '#c4b5fd',
-			red = '#fca5a5',
-			maroon = '#fecaca',
-			peach = '#fdba74',
-			yellow = '#fef08a',
-			green = '#86efac',
-			teal = '#5eead4',
-			sky = '#67e8f9',
-			sapphire = '#7dd3fc',
-			blue = '#93c5fd',
-			lavender = '#a5b4fc',
-			text = '#ffffff',
-			subtext1 = '#fafafa',
-			subtext0 = '#f5f5f5',
-			overlay2 = '#e5e5e5',
-			overlay1 = '#d4d4d4',
-			overlay0 = '#a3a3a3',
-			surface2 = '#737373',
-			surface1 = '#525252',
-			surface0 = '#404040',
-			base = '#262626',
-			mantle = '#1f1f1f',
-			crust = '#171717',
-		},
-		mocha = {
-			rosewater = '#fecdd3',
-			flamingo = '#f0abfc',
-			pink = '#f9a8d4',
-			mauve = '#c4b5fd',
-			red = '#fca5a5',
-			maroon = '#fecaca',
-			peach = '#fdba74',
-			yellow = '#fef08a',
-			green = '#86efac',
-			teal = '#5eead4',
-			sky = '#67e8f9',
-			sapphire = '#7dd3fc',
-			blue = '#93c5fd',
-			lavender = '#a5b4fc',
-			text = '#fdfdfc',
-			subtext1 = '#fafaf9',
-			subtext0 = '#f5f5f4',
-			overlay2 = '#e7e5e4',
-			overlay1 = '#d6d3d1',
-			overlay0 = '#a8a29e',
-			surface2 = '#78716c',
-			surface1 = '#57534e',
-			surface0 = '#44403c',
-			base = '#292524',
-			mantle = '#1c1917',
-			crust = '#0e0c0b',
-		},
-	},
 	highlight_overrides = {
 		all = function(colors)
 			return {

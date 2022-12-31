@@ -13,16 +13,10 @@ rt.setup {
 			local opts = { buffer = bufnr, remap = false }
 			vim.keymap.set('n', 'K', rt.hover_actions.hover_actions, opts)
 			vim.keymap.set('n', '<leader>ca', rt.code_action_group.code_action_group, opts)
-
-			vim.notify('🦀🦀🦀 RUST TOOLS 🦀🦀🦀', 'info', {
-				render = 'minimal',
-			})
 		end,
 		settings = {
 			['rust-analyzer'] = {
-				checkOnSave = {
-					command = 'clippy',
-				},
+				checkOnSave = { command = 'clippy' },
 			},
 		},
 	},
